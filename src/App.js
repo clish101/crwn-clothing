@@ -49,21 +49,21 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div div >
 
         <Header />
         <Switch >
           <Route exact path='/' component={Homepage} />
           <Route path='/shop' component={ShopPage} />
-          <Route exact path='/signIn' render={()=>this.props.currentUser?(<Redirect to='/'/>):(<SignInAndSignUp/>)} />
+          <Route exact path='/signIn' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndSignUp />)} />
         </Switch>
-      </div>
-    );
+      </div>)
   }
-
 }
 
-const mapStateToProps=({user})=>({
+
+
+const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser
 })
 
